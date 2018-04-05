@@ -78,9 +78,10 @@
         <!-- Sets map location and moves zoom controls -->
         var map = L.map('map', {zoomControl: true}).setView([44.405764, -73.237193], 13);
         L.esri.basemapLayer('Gray').addTo(map);
-        L.esri.featureLayer({
-    url: 'https://maps.vcgi.vermont.gov/arcgis/rest/services/EGC_services/OPENDATA_VCGI_ELEVATION_SP_NOCACHE_v1/MapServer/2/'
-  }).addTo(map);
+        var traillinesurl = "https://maps.vcgi.vermont.gov/arcgis/rest/services/EGC_services/OPENDATA_VCGI_ELEVATION_SP_NOCACHE_v1/MapServer/2/";
+        var traillines = L.esri.featureLayer({
+          url: traillinesurl
+        }).addTo(map);
       </script>
 </div>
    </div>
