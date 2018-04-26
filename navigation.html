@@ -61,7 +61,7 @@
               <a class="nav-link" href="#">Wind</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="navigation.html">Weather</a>
+              <a class="nav-link" href="#">Weather</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">About</a>
@@ -76,25 +76,16 @@
      <div id="map" ></div>
      <script>
         <!-- Sets map location and moves zoom controls -->
-        var map = L.map('map', {zoomControl: true}).setView([44.405764, -73.237193], 13);
-        L.esri.basemapLayer('Gray').addTo(map);
-        var traillinesurl = "https://maps.vcgi.vermont.gov/arcgis/rest/services/EGC_services/OPENDATA_VCGI_ELEVATION_SP_NOCACHE_v1/MapServer/2/";
-        var traillines = L.esri.featureLayer({url: traillinesurl,
-      style: function (feature) {
-        return {color: '#f49842',
-        weight: 2,
-        opacity: 0.8,};
-        }
-    }).addTo(map);
-
+        var map = L.map('nautical-map-container');
 var overlay=new JNC.Leaflet.NavionicsOverlay({
     navKey: 'navionics_key',
-    chartType: JNC.NAVIONICS_CHARTS.SONARCHART,
+    chartType: JNC.NAVIONICS_CHARTS.NAUTICAL,
     isTransparent: true,
     zIndex: 1
-});
+}));
 map.setView([36.140751,-5.353585], 14);
 overlay.addTo(map);
+                
       </script>
 </div>
    </div>
