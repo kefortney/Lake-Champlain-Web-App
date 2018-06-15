@@ -14,95 +14,232 @@
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/full.css" rel="stylesheet">
-
-     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-
-     <!-- Load Leaflet from CDN -->
-     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
-     integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
-     crossorigin=""/>
-     <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
-     integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
-     crossorigin=""></script>
-
-
-     <!-- Load Esri Leaflet from CDN -->
-     <script src="https://unpkg.com/esri-leaflet@2.1.3/dist/esri-leaflet.js"
-     integrity="sha512-pijLQd2FbV/7+Jwa86Mk3ACxnasfIMzJRrIlVQsuPKPCfUBCDMDUoLiBQRg7dAQY6D1rkmCcR8286hVTn/wlIg=="
-     crossorigin=""></script>
-
-   <style>
-    body { margin:0; padding:0; }
-    #map { position: absolute; top:0; bottom:0; right:0; left:0;}
-    </style>
-    <!-- tell the mobile browser to disable unwanted scaling of the page and set it to its actual size -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="css/modern-business.css" rel="stylesheet">
 
   </head>
 
   <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Lake Champlain</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="index.html">Lake Champlain</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Depth
-                <span class="sr-only">(current)</span>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Navigation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="forecast.html">Forecast</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Current.html">Current Conditions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+<!--
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Portfolio
               </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                <a class="dropdown-item" href="portfolio-1-col.html">1 Column Portfolio</a>
+                <a class="dropdown-item" href="portfolio-2-col.html">2 Column Portfolio</a>
+                <a class="dropdown-item" href="portfolio-3-col.html">3 Column Portfolio</a>
+                <a class="dropdown-item" href="portfolio-4-col.html">4 Column Portfolio</a>
+                <a class="dropdown-item" href="portfolio-item.html">Single Portfolio Item</a>
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="current.html">Current Conditions</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Blog
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                <a class="dropdown-item" href="blog-home-1.html">Blog Home 1</a>
+                <a class="dropdown-item" href="blog-home-2.html">Blog Home 2</a>
+                <a class="dropdown-item" href="blog-post.html">Blog Post</a>
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Forecast</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Other Pages
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                <a class="dropdown-item" href="full-width.html">Full Width Page</a>
+                <a class="dropdown-item" href="sidebar.html">Sidebar Page</a>
+                <a class="dropdown-item" href="faq.html">FAQ</a>
+                <a class="dropdown-item" href="404.html">404</a>
+                <a class="dropdown-item" href="pricing.html">Pricing Table</a>
+              </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
+-->
           </ul>
         </div>
       </div>
     </nav>
 
+    <header>
+
+    </header>
+
     <!-- Page Content -->
     <div class="container">
-     <div id="map" >
-       <iframe align="top" src="https://widgets.iwindsurf.com/widgets/web/modelTable?spot_id=154018&units_wind=mph&units_temp=F&type=daily&width=800&height=310&color=163770&name=Colchester Reef&activity=Windsurf&app=iwindsurf" width="800" height="310" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
-
-       <iframe align="top" src="https://widgets.iwindsurf.com/widgets/web/modelTable?spot_id=174244&units_wind=mph&units_temp=F&type=daily&width=700&height=310&color=163770&name=Burlington Waterfront&activity=Windsurf&app=iwindsurf" width="700" height="310" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
 
 
-       <iframe align="top" src="https://widgets.iwindsurf.com/widgets/web/modelTable?spot_id=154018&units_wind=mph&units_temp=F&type=extended&width=800&height=310&color=163770&name=Colchester Reef&activity=Windsurf&app=iwindsurf" width="800" height="310" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
+      <h2>Portfolio Heading</h2>
 
-       <iframe align="top" src="https://widgets.iwindsurf.com/widgets/web/modelTable?spot_id=174244&units_wind=mph&units_temp=F&type=extended&width=710&height=310&color=163770&name=Burlington Waterfront&activity=Windsurf&app=iwindsurf" width="710" height="310" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
+      <div class="row">
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <iframe align="top" src="https://widgets.iwindsurf.com/widgets/web/modelTable?spot_id=154018&units_wind=mph&units_temp=F&type=daily&width=800&height=310&color=163770&name=Colchester Reef&activity=Windsurf&app=iwindsurf" width="800" height="310" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
 
-       <iframe align="top" src="http://widgets.iwindsurf.com/widgets/web/windStats?spot_id=154018&units_wind=mph&color=163770&activity=Windsurf&app=iwindsurf" width="650" height="400" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
-       <iframe align="top" src="https://widgets.iwindsurf.com/widgets/web/windArchive?spot_id=154018&day_start=-1&units_wind=mph&units_temp=F&width=500&height=300&color=163770&activity=Windsurf&app=iwindsurf" width="500" height="300" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
-
-       <iframe align="top" src="http://widgets.iwindsurf.com/widgets/web/windStats?spot_id=174244&units_wind=mph&color=163770&activity=Windsurf&app=iwindsurf" width="650" height="400" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
+            <iframe align="top" src="https://widgets.iwindsurf.com/widgets/web/modelTable?spot_id=174244&units_wind=mph&units_temp=F&type=daily&width=700&height=310&color=163770&name=Burlington Waterfront&activity=Windsurf&app=iwindsurf" width="700" height="310" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
 
 
-       <iframe align="top" src="https://widgets.iwindsurf.com/widgets/web/modelTable?spot_id=165147&units_wind=mph&units_temp=F&type=daily&width=700&height=310&color=163770&name=EW9454 Charlotte NC US&activity=Windsurf&app=iwindsurf" width="700" height="310" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
+            <iframe align="top" src="https://widgets.iwindsurf.com/widgets/web/modelTable?spot_id=154018&units_wind=mph&units_temp=F&type=extended&width=800&height=310&color=163770&name=Colchester Reef&activity=Windsurf&app=iwindsurf" width="800" height="310" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
 
-       <iframe align="top" src="https://widgets.iwindsurf.com/widgets/web/modelTable?spot_id=165147&units_wind=mph&units_temp=F&type=extended&width=710&height=310&color=163770&name=EW9454 Charlotte NC US&activity=Windsurf&app=iwindsurf" width="710" height="310" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
+            <iframe align="top" src="https://widgets.iwindsurf.com/widgets/web/modelTable?spot_id=174244&units_wind=mph&units_temp=F&type=extended&width=710&height=310&color=163770&name=Burlington Waterfront&activity=Windsurf&app=iwindsurf" width="710" height="310" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
 
-       <iframe align="top" src="http://widgets.iwindsurf.com/widgets/web/windStats?spot_id=165147&units_wind=mph&color=163770&activity=Windsurf&app=iwindsurf" width="650" height="400" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
+            <iframe align="top" src="http://widgets.iwindsurf.com/widgets/web/windStats?spot_id=154018&units_wind=mph&color=163770&activity=Windsurf&app=iwindsurf" width="650" height="400" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
+            <iframe align="top" src="https://widgets.iwindsurf.com/widgets/web/windArchive?spot_id=154018&day_start=-1&units_wind=mph&units_temp=F&width=500&height=300&color=163770&activity=Windsurf&app=iwindsurf" width="500" height="300" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
 
-       <iframe align="top" src="https://widgets.iwindsurf.com/widgets/web/modelTable?spot_id=175079&units_wind=mph&units_temp=F&type=extended&width=710&height=310&color=163770&name=Gordon Landing&activity=Windsurf&app=iwindsurf" width="710" height="310" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
+            <iframe align="top" src="http://widgets.iwindsurf.com/widgets/web/windStats?spot_id=174244&units_wind=mph&color=163770&activity=Windsurf&app=iwindsurf" width="650" height="400" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
 
+
+            <iframe align="top" src="https://widgets.iwindsurf.com/widgets/web/modelTable?spot_id=165147&units_wind=mph&units_temp=F&type=daily&width=700&height=310&color=163770&name=EW9454 Charlotte NC US&activity=Windsurf&app=iwindsurf" width="700" height="310" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
+
+            <iframe align="top" src="https://widgets.iwindsurf.com/widgets/web/modelTable?spot_id=165147&units_wind=mph&units_temp=F&type=extended&width=710&height=310&color=163770&name=EW9454 Charlotte NC US&activity=Windsurf&app=iwindsurf" width="710" height="310" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
+
+            <iframe align="top" src="http://widgets.iwindsurf.com/widgets/web/windStats?spot_id=165147&units_wind=mph&color=163770&activity=Windsurf&app=iwindsurf" width="650" height="400" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
+
+            <iframe align="top" src="https://widgets.iwindsurf.com/widgets/web/modelTable?spot_id=175079&units_wind=mph&units_temp=F&type=extended&width=710&height=310&color=163770&name=Gordon Landing&activity=Windsurf&app=iwindsurf" width="710" height="310" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
+     <iframe align="top" src="https://widgets.iwindsurf.com/widgets/web/modelTable?spot_id=175079&units_wind=mph&units_temp=F&type=extended&width=710&height=310&color=163770&name=Gordon Landing&activity=Windsurf&app=iwindsurf" width="710" height="310" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Project One</a>
+              </h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Project Two</a>
+              </h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Project Three</a>
+              </h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Project Four</a>
+              </h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Project Five</a>
+              </h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Project Six</a>
+              </h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.</p>
+            </div>
+          </div>
+        </div>
       </div>
 
 
+         </section>
 
-</div>
-   </div>
+
+
+      <!-- Contact Section -->
+      <section id="contact" class="content-section text-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2>Contact</h2>
+              Explore a variety of work at my personal site <a href="https://kendallfortney.com/" target="_blank">kendallfortney.com</a> or check out my variety of different pages including articles on Data Science and Geospatial Data on Medium or my code on Github.<p>
+
+
+              <ul class="list-inline banner-social-buttons">
+                <li class="list-inline-item">
+                  <a href="https://medium.com/@kefortney" class="btn btn-default btn-lg">
+                    <i class="fa fa-medium fa-fw"></i>
+                    <span class="network-name">Medium</span>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://github.com/kefortney" class="btn btn-default btn-lg">
+                    <i class="fa fa-github fa-fw"></i>
+                    <span class="network-name">Github</span>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://www.linkedin.com/in/kendall-fortney-97600181" class="btn btn-default btn-lg">
+                    <i class="fa fa-linkedin fa-fw"></i>
+                    <span class="network-name">Linkedin</span>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://www.instagram.com/kendallfortney/" class="btn btn-default btn-lg">
+                    <i class="fa fa-instagram fa-fw"></i>
+                    <span class="network-name">Instagram</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Kendall Fortney 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
