@@ -33,7 +33,13 @@
               <a class="nav-link" href="index.html">Navigation</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="forecast.html">Forecast</a>
+              <a class="nav-link" href="forecast.html">Wind Forecast</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.weather.gov/btv/recreation" target="_blank">NOAA Forecast</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="weather.html">Weather</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="Current.html">Current Conditions</a>
@@ -88,17 +94,15 @@
 
     <!-- Page Content -->
     <div class="container content-section text-center">
-      <h2>Current Conditions</h2>
+      <h1>Current Conditions</h1><br>
 
       <div class="col-lg-12">
-          <iframe align="top" name="wind-map" id="wind-map" src="https://widgets.iwindsurf.com/widgets/web/windMap?w=1000&h=600&c=163770&rp=18&m_m=t&search=44.4020,-73.2353&sn=Colchester Reef&sid=154018&u_t=F&act=Windsurf&app=iwindsurf" width="1000" height="600" frameborder="0" scrolling="no" allowtransparency="no"></iframe></iframe>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="#">Mooring</a>
-            </h4>
-            <p class="card-text">44.402054, -73.235305</p>
-            <iframe align="top" src="https://widgets.iwindsurf.com/widgets/web/currentConditions?spot_id=154018&units_wind=mph&units_temp=F&width=500&height=300&include_fx=false&color=163770&activity=Windsurf&app=iwindsurf" width="500" height="300" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
-        </div>
+        <h3 class="card-title">Mooring Location</h3> 44.403360, -73.236224 Dan Couture - Harbormaster Ph: 802-985-8825 (home phone)<br>
+          <iframe align="top" name="wind-map" id="wind-map" src="https://widgets.iwindsurf.com/widgets/web/windMap?w=1000&h=600&c=163770&rp=18&m_m=t&search=44.4033,-73.2362&sn=Colchester Reef&sid=154018&u_t=F&act=Windsurf&app=iwindsurf" width="1000" height="600" frameborder="0" scrolling="no" allowtransparency="no"></iframe></iframe>
+
+          <br>
+
+          <iframe align="top" src="https://widgets.iwindsurf.com/widgets/web/currentConditions?spot_id=154018&units_wind=mph&units_temp=F&width=500&height=300&include_fx=false&color=163770&activity=Windsurf&app=iwindsurf" width="500" height="300" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
       </div>
 
 
@@ -172,45 +176,6 @@
       </div>
     </div>
 
-      <!-- Contact Section -->
-      <section id="contact" class="content-section text-center">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <h2>Contact</h2>
-              Explore a variety of work at my personal site <a href="https://kendallfortney.com/" target="_blank">kendallfortney.com</a> or check out my variety of different pages including articles on Data Science and Geospatial Data on Medium or my code on Github.<p>
-
-
-              <ul class="list-inline banner-social-buttons">
-                <li class="list-inline-item">
-                  <a href="https://medium.com/@kefortney" class="btn btn-default btn-lg">
-                    <i class="fa fa-medium fa-fw"></i>
-                    <span class="network-name">Medium</span>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="https://github.com/kefortney" class="btn btn-default btn-lg">
-                    <i class="fa fa-github fa-fw"></i>
-                    <span class="network-name">Github</span>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="https://www.linkedin.com/in/kendall-fortney-97600181" class="btn btn-default btn-lg">
-                    <i class="fa fa-linkedin fa-fw"></i>
-                    <span class="network-name">Linkedin</span>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="https://www.instagram.com/kendallfortney/" class="btn btn-default btn-lg">
-                    <i class="fa fa-instagram fa-fw"></i>
-                    <span class="network-name">Instagram</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
 
     <!-- Footer -->
     <footer class="py-5 bg-dark">
